@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有幸的世界 - 爱好与计划</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="hobby-page">
+    <div class="back-btn" style="margin-top:32px; margin-left:32px;">
+        <a href="articles.html" class="back-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <span>Back</span>
+        </a>
+    </div>
+    <main class="hobby-main">
+        <section class="hobby-section">
+            <h2 class="section-title">HOBBY</h2>
+            <div class="tag-list" id="hobby-tags">
+                <a href="#" class="tag-btn" data-case="sport">
+                    <svg class="tag-icon sport-icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g>
+                            <circle cx="14" cy="6" r="3" fill="#5E60CE"/>
+                            <rect x="12" y="9" width="4" height="8" rx="2" fill="#5E60CE"/>
+                            <rect class="sport-leg" x="13" y="17" width="2" height="7" rx="1" fill="#FFB703"/>
+                            <rect class="sport-leg2" x="13" y="17" width="2" height="7" rx="1" fill="#5E60CE" transform="rotate(30 14 20.5)"/>
+                            <rect x="12.5" y="24" width="3" height="2" rx="1" fill="#FFB703"/>
+                        </g>
+                    </svg>运动</a>
+                <a href="#" class="tag-btn" data-case="sing">
+                    <svg class="tag-icon sing-icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g>
+                            <ellipse class="mic-head" cx="14" cy="8" rx="5" ry="6" fill="#5390D9"/>
+                            <rect x="12" y="14" width="4" height="7" rx="2" fill="#23272F"/>
+                            <rect x="13" y="21" width="2" height="3" rx="1" fill="#5390D9"/>
+                        </g>
+                    </svg>唱歌</a>
+                <a href="#" class="tag-btn" data-case="read">
+                    <svg class="tag-icon read-icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g>
+                            <rect x="4" y="13" width="8" height="6" rx="3" fill="#FFB703" stroke="#23272F" stroke-width="2"/>
+                            <rect x="16" y="13" width="8" height="6" rx="3" fill="#FFB703" stroke="#23272F" stroke-width="2"/>
+                            <rect x="12" y="15" width="4" height="2" rx="1" fill="#23272F"/>
+                            <rect class="glass-reflect" x="6" y="15" width="4" height="1" rx="0.5" fill="#fff"/>
+                            <rect class="glass-reflect2" x="18" y="15" width="4" height="1" rx="0.5" fill="#fff"/>
+                        </g>
+                    </svg>阅读</a>
+            </div>
+            <div class="case-box" id="case-sport">运动相关内容展示区，待补充。</div>
+            <div class="case-box" id="case-sing">唱歌相关内容展示区，待补充。</div>
+            <div class="case-box" id="case-read">阅读相关内容展示区，待补充。</div>
+        </section>
+        <section class="plan-section">
+            <h2 class="section-title">PLAN</h2>
+            <div class="tag-list" id="plan-tags">
+                <a href="#" class="tag-btn" data-case="douyin">
+                    <svg class="tag-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect class="plan-icon-rect" x="2" y="2" width="28" height="28" rx="8" fill="#e0e7ff"/>
+                        <path d="M20 8v10a6 6 0 1 1-6-6" stroke="#09F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="8" r="2" fill="#09F"/>
+                    </svg>抖音方向</a>
+                <a href="#" class="tag-btn" data-case="xiaohongshu">
+                    <svg class="tag-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect class="plan-icon-rect" x="2" y="2" width="28" height="28" rx="8" fill="#ffe5ea"/>
+                        <text x="16" y="21" text-anchor="middle" font-size="13" font-family="'Inter', 'Noto Sans SC', sans-serif" fill="#FF2442" font-weight="bold">XHS</text>
+                    </svg>小红书方向</a>
+                <a href="#" class="tag-btn" data-case="wechat">
+                    <svg class="tag-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect class="plan-icon-rect" x="2" y="2" width="28" height="28" rx="8" fill="#e6f9ed"/>
+                        <rect x="8" y="12" width="16" height="10" rx="4" stroke="#07C160" stroke-width="2" fill="#fff"/>
+                        <path d="M8 12l8 7 8-7" stroke="#07C160" stroke-width="2"/>
+                    </svg>公众号方向</a>
+            </div>
+            <div class="case-box" id="case-douyin">抖音方向相关内容展示区，待补充。</div>
+            <div class="case-box" id="case-xiaohongshu">小红书方向相关内容展示区，待补充。</div>
+            <div class="case-box" id="case-wechat">公众号方向相关内容展示区，待补充。</div>
+        </section>
+    </main>
+    <script>
+    // 标签点击切换case展示
+    function setupTagCases(tagListId, cases) {
+        const tagList = document.getElementById(tagListId);
+        if (!tagList) return;
+        const btns = tagList.querySelectorAll('.tag-btn');
+        btns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                cases.forEach(cid => {
+                    document.getElementById('case-' + cid).classList.remove('active');
+                });
+                document.getElementById('case-' + btn.dataset.case).classList.add('active');
+            });
+        });
+    }
+    setupTagCases('hobby-tags', ['sport','sing','read']);
+    setupTagCases('plan-tags', ['douyin','xiaohongshu','wechat']);
+    </script>
+</body>
+</html> 
